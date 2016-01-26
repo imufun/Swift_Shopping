@@ -8,11 +8,21 @@
 
 import UIKit
 
+protocol NewItemVCDelegate {
+    func addNewItem(item: Item)
+}
+
 class NewItemVC: UIViewController {
 
     @IBOutlet weak var itemName: UITextField!
     
     @IBOutlet weak var brandName: UITextField!
+    
+    var item: Item?
+    
+//    var delegate: NewItemVCDelegate! = nil
+//    var delegate = NewItemVCDelegate!()
+    var delegate: NewItemVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +46,21 @@ class NewItemVC: UIViewController {
     }
     */
     @IBAction func saveItem(sender: UIButton) {
+        if  itemName.text != "" && brandName.text != "" {
+            item = Item(itemName: itemName.text!, brandName: brandName.text!)
+            
+            delegate?.addNewItem(item!)
+            
+            self.navigationController?.popViewControllerAnimated(true)
+        } else {
+            let alertController = UIAlertController(title: "温馨提醒", message: "您输入商品信息不完整哦", preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "取消", style: .Cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        
+//        self
+        
     }
 
 }

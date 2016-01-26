@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,NewItemVCDelegate {
 
     @IBOutlet weak var myTableView: UITableView!
 //    let toBuyItems = [
@@ -34,13 +34,19 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        myTableView.reloadData()
+    }
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return toBuyItems.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "Cell")
 //        cell.textLabel?.text = "牛奶"
 //        let (item, brand) = toBuyItems[indexPath.row]
 //        cell.textLabel?.text = item
@@ -50,6 +56,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         cell.textLabel?.text = item.itemName
         cell.detailTextLabel?.text = item.brandName
         
+        if item.isBuy {
+            cell.textLabel?.textColor = .greenColor()
+        } else {
+            cell.textLabel?.textColor = .redColor()
+        }
+        
         return cell
     }
     
@@ -58,20 +70,22 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "itemSegue" {
+        if segue.identifier == "newItemSegue" {
+            let destination: NewItemVC = segue.destinationViewController as! NewItemVC
+            destination.delegate = self
+        } else {
             let destination: itemVC = segue.destinationViewController as! itemVC
             if sender is Int {
-//                let (itemName, brandName) = toBuyItems[sender as! Int]
-//                
-//                destination.itemName = itemName
-//                destination.brandName = brandName
-                
                 let item = toBuyItems[sender as! Int]
                 destination.item = item
             }
         }
     }
 
+    func addNewItem(item: Item) {
+        toBuyItems.append(item)
+        myTableView.reloadData()
+    }
     
 
 }
