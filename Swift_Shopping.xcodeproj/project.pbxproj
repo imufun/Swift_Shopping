@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6607D8851C59AFBF00F0BAAA /* AlbumItemsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6607D8841C59AFBF00F0BAAA /* AlbumItemsCVC.swift */; };
+		6607D8871C59B5F700F0BAAA /* ItemPhotoCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6607D8861C59B5F700F0BAAA /* ItemPhotoCVCell.swift */; };
 		666ED9631C584A8900C4B46D /* zylogo_640-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 666ED9621C584A8900C4B46D /* zylogo_640-3.png */; };
 		666ED9A21C586CFB00C4B46D /* SpecialsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666ED9A11C586CFB00C4B46D /* SpecialsDetailVC.swift */; };
 		6692BDD51C561AD80073C8EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6692BDD41C561AD80073C8EB /* AppDelegate.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6607D8841C59AFBF00F0BAAA /* AlbumItemsCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumItemsCVC.swift; sourceTree = "<group>"; };
+		6607D8861C59B5F700F0BAAA /* ItemPhotoCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemPhotoCVCell.swift; sourceTree = "<group>"; };
 		666ED9621C584A8900C4B46D /* zylogo_640-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zylogo_640-3.png"; sourceTree = "<group>"; };
 		666ED9A11C586CFB00C4B46D /* SpecialsDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialsDetailVC.swift; sourceTree = "<group>"; };
 		6692BDD11C561AD80073C8EB /* Swift_Shopping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Shopping.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +127,8 @@
 			children = (
 				6692BDD41C561AD80073C8EB /* AppDelegate.swift */,
 				6692BDD81C561AD80073C8EB /* Main.storyboard */,
+				6607D8841C59AFBF00F0BAAA /* AlbumItemsCVC.swift */,
+				6607D8861C59B5F700F0BAAA /* ItemPhotoCVCell.swift */,
 				66DAB6D51C5756310026A290 /* 商品清单 */,
 				66DAB6D61C5758940026A290 /* 特价商品 */,
 				666ED9611C584A8900C4B46D /* Resource */,
@@ -311,7 +317,9 @@
 				666ED9A21C586CFB00C4B46D /* SpecialsDetailVC.swift in Sources */,
 				66DAB6D11C5753610026A290 /* SpecialForSupermarkerTVC.swift in Sources */,
 				6692BDD51C561AD80073C8EB /* AppDelegate.swift in Sources */,
+				6607D8871C59B5F700F0BAAA /* ItemPhotoCVCell.swift in Sources */,
 				66DAB6D81C57675A0026A290 /* SpecialsTVC.swift in Sources */,
+				6607D8851C59AFBF00F0BAAA /* AlbumItemsCVC.swift in Sources */,
 				6692BE071C5626060073C8EB /* itemVC.swift in Sources */,
 				66DAB6D31C5755BD0026A290 /* Specials.swift in Sources */,
 			);
