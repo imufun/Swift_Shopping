@@ -13,10 +13,29 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleAspectFit" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zylogo_640-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="602-Js-cjD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我在测试哦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4t-xc-SkF">
+                                <rect key="frame" x="223" y="56" width="155" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="602-Js-cjD" secondAttribute="trailing" id="0Aq-Fy-PSy"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="602-Js-cjD" secondAttribute="bottom" id="EKs-1Z-wsR"/>
+                            <constraint firstItem="i4t-xc-SkF" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="36" id="Khk-TF-3ay"/>
+                            <constraint firstItem="i4t-xc-SkF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ZfC-ZP-NKm"/>
+                            <constraint firstItem="602-Js-cjD" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="g1M-bd-243"/>
+                            <constraint firstItem="602-Js-cjD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="w3D-Kf-gS1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +43,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="zylogo_640-3.png" width="750" height="1334"/>
+    </resources>
 </document>
